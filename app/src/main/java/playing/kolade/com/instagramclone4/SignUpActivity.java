@@ -43,9 +43,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         onClick(btnSignUp);
 
                     }
-                    return false;
+                    return false;// This block is to make the Enter key to perform the function of btnSignUp
                 }
         });
+
         btnLogin = findViewById(R.id.btnLogin);
         btnSignUp = findViewById(R.id.btnSignUp);
 
@@ -75,13 +76,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                 else {
 
-                    final ParseUser user = new ParseUser();
+                    final ParseUser user = new ParseUser(); // This block is to sign up the user with the name, email and password
 
                     user.setUsername(edtSignUpUserName.getText().toString());
                     user.setEmail(edtSignUpEmail.getText().toString());
                     user.setPassword(edtSignUpPassword.getText().toString());
 
-                    final ProgressDialog progressDialog = new ProgressDialog(this);
+                    final ProgressDialog progressDialog = new ProgressDialog(this); //The process dialog is to show a progress graphic when data is being loaded
                     progressDialog.setMessage("Signing up " + edtSignUpUserName.getText().toString());
                     progressDialog.show();
 

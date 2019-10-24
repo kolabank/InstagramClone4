@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        setTitle("Log in");
+        setTitle("Log in"); //Sets the title of the activity
 
         edtLoginUsername = findViewById(R.id.edtLoginUsername);
         edtLoginPassword = findViewById(R.id.edtLoginPassword);
@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 if(keyCode ==KeyEvent.KEYCODE_ENTER && event.getAction()==KeyEvent.ACTION_DOWN)
 
-                    onClick(btnLoginLogin);
+                    onClick(btnLoginLogin); //This block is to make the Enter key perform te function of btnLogiLogin button
 
                 return false;
             }
@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    public void logInLayoutClicked (View view) {
+    public void logInLayoutClicked (View view) { //This block is to make the keypad to disappear when the layout is clicked
 
         try {
 
